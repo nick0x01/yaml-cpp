@@ -61,8 +61,9 @@ endif()
 include_directories(${YAML_CPP_SOURCE_DIR}/src)
 include_directories(${YAML_CPP_SOURCE_DIR}/include)
 
-# SET(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MD")
-# SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MDd")
+SET(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+
 set(yaml_cxx_flags ${CMAKE_CXX_FLAGS})
 
 set(CMAKE_STATIC_LIBRARY_PREFIX "lib")	# to distinguish static libraries from DLL import libs
